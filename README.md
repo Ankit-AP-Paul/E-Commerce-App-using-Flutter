@@ -1,16 +1,19 @@
-# e_commerce_app
 
-A new Flutter project.
+# MyShop.com
 
-## Getting Started
+An all-in-one E-commerce solution with seamless UI/UX, built using Flutter for cross-platform compatibility, offering a wide range of products and secure online transactions.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Authors
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [@Ankit Paul](https://github.com/Ankit-AP-Paul)
+- [@Arpan De](https://github.com/neo-deus)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at ankitpaul894@gmail.com
+
+
