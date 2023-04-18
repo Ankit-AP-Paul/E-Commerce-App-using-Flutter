@@ -7,7 +7,9 @@ import 'bottomNavigationBar.dart';
 ValueNotifier<int> navIndex = ValueNotifier<int>(0);
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  String emailID;
+
+  Home({super.key, required this.emailID});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -47,7 +49,9 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      drawer: const DrawerMenu(),
+      drawer: DrawerMenu(
+        emailID: widget().emailID.toString(),
+      ),
       body: Stack(children: [
         ListView(
           padding: const EdgeInsets.fromLTRB(10, 15, 10, 0),

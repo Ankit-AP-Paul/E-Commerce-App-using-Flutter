@@ -2,36 +2,48 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/container.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 
+// ignore: must_be_immutable
 class DrawerMenu extends StatefulWidget {
-  const DrawerMenu({super.key});
+  // ignore: prefer_typing_uninitialized_variables
+  String emailID;
+
+  DrawerMenu({super.key, required this.emailID});
 
   @override
   State<DrawerMenu> createState() => _DrawerMenuState();
 }
 
 class _DrawerMenuState extends State<DrawerMenu> {
+  String email = "User";
+  void getData() {
+    email = widget().emailID.toString();
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    getData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    String emailID = email;
     return Drawer(
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            const UserAccountsDrawerHeader(
-              accountName: Text(
-                'Hindol Banerjee',
+            UserAccountsDrawerHeader(
+              accountName: const Text(
+                'Logged on',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              accountEmail: Text(
-                'hbs69@example.com',
-                style: TextStyle(fontSize: 16),
-              ),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/profile_picture.png'),
-              ),
-              decoration: BoxDecoration(
+              // ignore: unnecessary_string_interpolations
+              accountEmail: Text(emailID),
+              decoration: const BoxDecoration(
                 color: Colors.blue,
               ),
             ),
